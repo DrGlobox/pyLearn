@@ -11,10 +11,9 @@ def signal_handler(signal, frame):
 signal.signal(signal.SIGINT, signal_handler)
 
 FILES = [
-		  "verbe"
-		  #,"vocabulaire"
-		  #,"conjugaison"
-		  #,"phrases"
+		  #"verbe",
+		  "LE03",
+		  #"LE02",
 		  ]
 DATA = []
 FAIL = []
@@ -52,7 +51,7 @@ def startTest(datas):
 	print "\n\n\033[33m START new test\033[0m"
 	FAIL = []
 	for data in datas:
-		print str(datas.index(data)+1) +"/"+str(len(datas)+1)+" :",
+		print str(datas.index(data)+1) +"/"+str(len(datas))+" :",
 		if question(data[0],data[1]):
 			print "\033[32m right : ",
 		else:
